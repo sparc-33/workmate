@@ -1,0 +1,189 @@
+.app-shell {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f5f6f8;
+  box-sizing: border-box;
+}
+
+/* Full-width header at the very top of the window; the sidebar and chat
+   area sit in a row underneath it. */
+.app-header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e5eb;
+  box-sizing: border-box;
+}
+
+.app-header-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.app-header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #33394d;
+}
+
+.app-header-user .login-button {
+  margin-top: 0;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.app-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 260px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-right: 1px solid #e3e5eb;
+  padding: 16px 12px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.new-chat-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.new-chat-button:hover {
+  background: #4338ca;
+}
+
+.sidebar-section-label {
+  margin: 18px 6px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9096a8;
+}
+
+.conversation-history {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.conversation-history-item {
+  text-align: left;
+  padding: 9px 10px;
+  font-size: 13px;
+  color: #33394d;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-history-item:hover {
+  background: #f0f1f5;
+}
+
+.conversation-history-item--active {
+  background: #eef0ff;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.chat-screen {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* The only scrollable region: the header, sidebar, and composer stay put
+   while this area scrolls (see App.jsx's auto-scroll effect). min-height:
+   0 is required for a flex child to shrink and actually scroll instead of
+   pushing the layout taller. */
+.chat-history {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.chat-composer {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 24px 20px;
+  background: #f5f6f8;
+  border-top: 1px solid #e3e5eb;
+  box-sizing: border-box;
+}
+
+.suggested-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggested-prompt-button {
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4f46e5;
+  background: #ffffff;
+  border: 1px solid #c7c9f5;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.suggested-prompt-button:hover {
+  background: #eef0ff;
+  border-color: #4f46e5;
+}
+
+/* Pairs the current user's avatar with the message input bar, matching
+   the avatar shown on their own chat bubbles. */
+.composer-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.composer-input-row .message-input-bar {
+  flex: 1;
+  min-width: 0;
+}

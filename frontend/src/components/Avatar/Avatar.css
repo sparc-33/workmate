@@ -1,0 +1,20 @@
+.avatar {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar--ai {
+  background: #4f46e5;
+}
+
+.avatar--user {
+  background: #9096a8;
+}
